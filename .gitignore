@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Secrets - never commit real credentials
+.env
+.env.*
+!.env.example
+
+# Uploaded staff documents (Aadhaar, PAN, photos) - private personal data
+server/uploads/
+
+# Build output
+dist/
+dist-ssr/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Editor / OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
