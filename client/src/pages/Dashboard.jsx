@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -30,11 +31,11 @@ function Dashboard() {
 
       try {
         const statsResponse = await axios.get(
-          `http://localhost:5000/api/complaints/stats/${user.id}`
+          `${API_URL}/api/complaints/stats/${user.id}`
         );
 
         const complaintsResponse = await axios.get(
-          `http://localhost:5000/api/complaints/citizen/${user.id}`
+          `${API_URL}/api/complaints/citizen/${user.id}`
         );
 
         setStats(statsResponse.data);

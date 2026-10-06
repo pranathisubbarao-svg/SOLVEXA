@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
@@ -58,7 +59,7 @@ function GoogleAuthButton({ onCredential, text = "continue_with", disabled }) {
     const setup = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/auth/google-config"
+          `${API_URL}/api/auth/google-config`
         );
 
         if (!data.clientId) {

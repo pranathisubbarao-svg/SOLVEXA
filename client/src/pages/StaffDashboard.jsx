@@ -1,10 +1,11 @@
+import { API_URL } from "../config";
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "../staff.css";
 
-const API = "http://localhost:5000/api/staff";
+const API = `${API_URL}/api/staff`;
 
 const ACTIVE_STATUSES = ["Assigned", "In Progress"];
 

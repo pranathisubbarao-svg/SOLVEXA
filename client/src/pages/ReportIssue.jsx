@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -40,7 +41,7 @@ function ReportIssue() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/complaints",
+        `${API_URL}/api/complaints`,
         {
           title: formData.title,
           description: formData.description,

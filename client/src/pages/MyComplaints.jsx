@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -44,7 +45,7 @@ function MyComplaints() {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/complaints/citizen/${user.id}`
+          `${API_URL}/api/complaints/citizen/${user.id}`
         );
 
         setComplaints(response.data.complaints || []);

@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -5,7 +6,7 @@ import axios from "axios";
 import "../register.css";
 import GoogleAuthButton from "../components/GoogleAuthButton";
 
-const API = "http://localhost:5000/api/auth";
+const API = `${API_URL}/api/auth`;
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_PATTERN = /^\+?[0-9]{10,13}$/;

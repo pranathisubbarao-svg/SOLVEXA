@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -5,7 +6,7 @@ import axios from "axios";
 import "../register.css";
 import "../apply.css";
 
-const API = "http://localhost:5000/api/auth";
+const API = `${API_URL}/api/auth`;
 
 const MAX_FILE_MB = 5;
 const IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];

@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -169,7 +170,7 @@ function Home() {
   // =====================================
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/complaints/public/summary")
+      .get(`${API_URL}/api/complaints/public/summary`)
       .then((response) => setSummary(response.data))
       .catch((error) => {
         console.error("Home summary error:", error);

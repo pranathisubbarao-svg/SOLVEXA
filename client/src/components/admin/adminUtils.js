@@ -1,4 +1,5 @@
-export const API = "http://localhost:5000/api/admin";
+import { API_URL } from "../../config";
+export const API = `${API_URL}/api/admin`;
 
 export const STATUSES = [
   "Submitted",

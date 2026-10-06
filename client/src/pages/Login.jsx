@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -83,7 +84,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${API_URL}/api/auth/login`,
         {
           email: formData.email,
           password: formData.password,
@@ -107,7 +108,7 @@ function Login() {
   const handleGoogleCredential = async (credential) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/google",
+        `${API_URL}/api/auth/google`,
         { credential }
       );
 
