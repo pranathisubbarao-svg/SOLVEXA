@@ -4,6 +4,14 @@ A civic issue reporting platform. Citizens report community problems (potholes,
 street lights, garbage, water, drainage…), admins review and assign them, and
 staff resolve them — with progress tracked at every step.
 
+## Live demo
+
+- **App (frontend, Vercel):** https://solvexa-seven.vercel.app
+- **API (backend, Render):** https://solvexa-sg6z.onrender.com
+
+Hosted on free tiers for a demo: the API sleeps after ~15 minutes idle, so the
+first request can take up to ~50 seconds. Uploaded files are not persisted.
+
 ## Features
 
 - **Citizens** – register (email or Google), report issues, track progress on *My Complaints*
